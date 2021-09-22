@@ -1,3 +1,5 @@
 {
-  "item.simplesteel.steel_ingot": "Steel Ingot"
+  "item.simplesteel.steel_ingot": "Steel Ingot",
+
+  "block.simplesteel.steel_block": "Block of Steel"
 }

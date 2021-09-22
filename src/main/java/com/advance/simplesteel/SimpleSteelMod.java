@@ -1,5 +1,8 @@
 package com.advance.simplesteel;
 
+import com.advance.simplesteel.block.ModBlocks;
+import com.advance.simplesteel.item.ModItems;
+import com.advance.simplesteel.util.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +33,11 @@ public class SimpleSteelMod
     private static final Logger LOGGER = LogManager.getLogger();
 
     public SimpleSteelMod() {
+
+        Registration.register();
+        ModItems.register();
+        ModBlocks.register();
+
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
