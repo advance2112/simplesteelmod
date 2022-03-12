@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "sss",
+        "s s"
+    ],
+    "key": {
+        "s": {
+            "item": "simplesteel:steel_ingot"
+        }
+    },
+    "result": {
+        "item": "simplesteel:steel_helmet",
+        "count": 1
+    }
+}

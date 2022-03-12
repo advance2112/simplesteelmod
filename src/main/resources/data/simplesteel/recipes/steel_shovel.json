@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "s",
+        "/",
+        "/"
+    ],
+    "key": {
+        "s": {
+            "item": "simplesteel:steel_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "simplesteel:steel_shovel",
+        "count": 1
+    }
+}

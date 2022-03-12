@@ -72,7 +72,6 @@ public class ModItems {
             );
 
 
-
     public static final RegistryObject<Item> STEEL_HELMET =
             Registration.ITEMS.register("steel_helmet",
                     () -> new ArmorItem(ModArmorMaterial.STEEL, EquipmentSlotType.HEAD,
@@ -88,6 +87,7 @@ public class ModItems {
                                     .tab(ItemGroup.TAB_COMBAT)
                     )
             );
+
     public static final RegistryObject<Item> STEEL_LEGGINGS =
             Registration.ITEMS.register("steel_leggings",
                     () -> new ArmorItem(ModArmorMaterial.STEEL, EquipmentSlotType.LEGS,
@@ -95,6 +95,7 @@ public class ModItems {
                                     .tab(ItemGroup.TAB_COMBAT)
                     )
             );
+
     public static final RegistryObject<Item> STEEL_BOOTS =
             Registration.ITEMS.register("steel_boots",
                     () -> new ArmorItem(ModArmorMaterial.STEEL, EquipmentSlotType.FEET,
@@ -104,12 +105,10 @@ public class ModItems {
             );
 
 
+    public static void register() {
+    }
 
-
-    public static void register() { }
-
-    public enum ModItemTier implements IItemTier
-    {
+    public enum ModItemTier implements IItemTier {
         STEEL(2, 500, 6.0F, 2.0F, 12, Ingredient.of(new ItemStack(ModItems.STEEL_INGOT.get())));
 
         private final int harvestLevel;
@@ -159,9 +158,8 @@ public class ModItems {
         }
     }
 
-    public enum ModArmorMaterial implements IArmorMaterial
-    {
-        STEEL(SimpleSteelMod.MOD_ID + ":steel", 30, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+    public enum ModArmorMaterial implements IArmorMaterial {
+        STEEL(SimpleSteelMod.MOD_ID + ":steel", 21, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
             return Ingredient.of(ModItems.STEEL_INGOT.get());
         });
 
@@ -175,7 +173,7 @@ public class ModItems {
         private final float knockbackResistance;
         private final LazyValue<Ingredient> repairIngredient;
 
-        private ModArmorMaterial(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+        ModArmorMaterial(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
             this.name = name;
             this.durabilityMultiplier = durabilityMultiplier;
             this.slotProtections = slotProtections;
